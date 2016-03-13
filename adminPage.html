@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Admin Page</title>
+        <link rel="stylesheet" href="MainPage.css" >
+    </head>
+    <body>
+        <header>
+            <h1>Admin Page</h1>
+            <img alt="College of Computer & Information Sciences" src="img/CCIS.png" >
+            <link type="text/css" rel="stylesheet" href="mainPage.css" >
+        </header>
+        <form action ="src/createCLO.php" method="post">
+            <div class="Inputdiv">
+    	<ul class="inputForm">
+        	<li class="labelslistItem">
+            	<ul class="labelForm">
+                	<li class="labelItem"><label for="cloID">CLO ID:</label></li>
+                    <li class="labelItem"><label for="courseID">Course ID:</label></li>
+                    <li class="labelItem"><label for="description">CLO Description:</label></li>
+                    <li class="labelItem" id="desTextArea"><label for="description">Choose a PLO:</label></li>
+                </ul>
+            </li>
+            <li class="labelslistItem">
+            	<ul class="inputElements">
+                	<li ><input class="inputItem" name="cloID" type="text" required></li>
+                    <li ><input class="inputItem" name="courseID" type="text" required></li>
+                    <li ><textarea class="inputItem" name="description" rows="10" cols="30" required></textarea></li>
+                    <li>
+                        <select name="PLOSelector" required>
+                            <option value="PLO A">PLO A</option>
+                            <option value="PLO B">PLO B</option>
+                            <option value="PLO C">PLO C</option>
+                        </select>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        </div>
+        <p><input name="submit" type="submit" value="Create"></p>
+        </form>
+    </body>
+</html>

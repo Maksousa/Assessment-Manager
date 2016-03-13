@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Assessement Manager</title>
+	<link type="text/css" rel="stylesheet" href="logInStyle.css">
+</head>
+<body>
+	<header>
+    	<img src="img/CCIS.png" alt="College of Computer & Information Sciences">
+    </header>
+    <form action ="src/logIn.php" method="post" enctype="multipart/form-data">
+    <div class="Inputdiv">
+    	<ul class="inputForm">
+        	<li class="labelslistItem">
+            	<ul class="labelForm">
+                	<li class="labelItem"><label for="username">Username:</label></li>
+                    <li class="labelItem"><label for="password">Password:</label></li>
+                </ul>
+            </li>
+            <li class="labelslistItem">
+            	<ul class="inputElements">
+                	<li ><input class="inputItem" name="username" type="text" required></li>
+                    <li ><input class="inputItem" name="password" type="password" required></li>
+                </ul>
+            </li>
+        </ul>
+        </div>
+        <p><input name="submit" type="submit" value="Log In"></p>
+    </form>
+</body>
+</html>

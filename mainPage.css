@@ -1,0 +1,33 @@
+body{
+	width:50%;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+form{
+	height:200px;
+}
+
+.Inputdiv{
+	height:150px;
+}
+
+ul {
+	list-style-type:none;
+}
+
+.labelslistItem {
+	float:left;	
+}
+
+.inputItem {
+	margin:10px;
+}
+
+.labelItem{
+	margin:15px;
+}
+
+#desTextArea{
+    padding-top: 140px;
+}
