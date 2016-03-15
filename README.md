@@ -1,2 +1,2 @@
 # Assessment-Manager
-It's to help instructors assess their student progress by using some standards, formulas and functions. 
+It's to help instructors assess their students progress by using a set standards, formulas and functions. 

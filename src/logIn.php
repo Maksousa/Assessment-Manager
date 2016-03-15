@@ -5,13 +5,13 @@
 
     // getting data from DB
     $query = 'SELECT Instructor_ID, Pass FROM instructor' ; 
-    $result = mysql_query($query);
+    $result = mysqli_query($conn, $query);
 
     $username =  $_POST['username']; 
     $password = md5($_POST['password']);
 
     // saving the data in an array
-    while ($instructor = mysql_fetch_array($result)) {  
+    while ($instructor = mysqli_fetch_array($result)) {  
         if ($instructor['Instructor_ID'] == $username ) {
             if ($instructor['Pass'] == $password) {
                 header('location: ../adminPage.html');

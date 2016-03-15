@@ -16,6 +16,6 @@
     $conn = mysqli_connect($dbHost, $dbUser, $dbPass); 
 
     // connecting to the database
-    mysqli_select_db($db); 
+    mysqli_select_db($conn ,$db); 
 
 ?>

@@ -7,19 +7,19 @@
     $plo = $_POST['PLOSelector'];
 
 
-    if ($_POST['submit']) {
-        mysqli_query("INSERT INTO clo " . "(CLO_ID, Course_ID, Description) ". "VALUES ('$cloID', '$courseID', '$description')")
-                    or die(mysql_error());
+    if ($_POST['submit']) 
+        mysqli_query($conn, "INSERT INTO clo (CLO_ID, Course_ID, Description) VALUES ('$cloID', '$courseID', '$description')")
+                    or die(mysqli_error($conn));
 
         $query = "SELECT Dept_ID FROM course " ."WHERE Course_ID='$courseID'";
-        $result = mysqli_query($query);
-        $department= mysql_fetch_array($result);
+        $result = mysqli_query($conn, $query);
+        $department= mysqli_fetch_array($result);
         $dept=$department['Dept_ID'];
-        mysqli_query("INSERT INTO clo_to_plo " . "(PLO_ID, Dept_ID, CLO_ID, Course_ID) ". "VALUES ('$plo', '$dept', '$cloID', '$courseID')")
-                    or die(mysql_error());
+        mysqli_query($conn, "INSERT INTO clo_to_plo " . "(PLO_ID, Dept_ID, CLO_ID, Course_ID) ". "VALUES ('$plo', '$dept', '$cloID', '$courseID')")
+                    or die(mysqli_error($conn));
 
         header('location: clos.php');
         exit;
-    } 
+     
 
 ?>
